@@ -1,0 +1,179 @@
+@import "tailwindcss" source(none);
+@source "./**/*.{ts,tsx}";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  h1, h2, h3, h4, h5, h6 { @apply font-semibold tracking-tight; }
+  button, input, select, textarea { font: inherit; }
+}
+
+/* Shared Tailwind components used by the older screens while they are being
+ * migrated. These are utilities composed with @apply, not a second stylesheet. */
+@layer components {
+  .container { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .dashboard { @apply flex min-h-[calc(100vh-70px)] bg-slate-50; }
+  .main-content { @apply min-w-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10; }
+  .card { @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md; }
+  .card-body { @apply p-5 sm:p-6; }
+  .card-header { @apply border-b border-slate-100 bg-slate-50/70 p-5 sm:p-6; }
+  .card-title { @apply m-0 text-xl font-semibold text-slate-900; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply bg-slate-900 text-white hover:bg-slate-700; }
+  .btn-secondary { @apply bg-slate-100 text-slate-800 hover:bg-slate-200; }
+  .btn-accent { @apply bg-teal-600 text-white hover:bg-teal-700; }
+  .btn-outline { @apply border border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50; }
+  .btn-danger { @apply bg-rose-600 text-white hover:bg-rose-700; }
+  .form-group { @apply mb-5; }
+  .form-label { @apply mb-2 block text-sm font-semibold text-slate-700; }
+  .form-control { @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10; }
+  .navbar { @apply sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur; }
+  .navbar-container { @apply mx-auto flex min-h-[70px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8; }
+  .navbar-brand-section, .navbar-brand, .navbar-logo, .nav-content, .nav-authenticated, .nav-links { @apply flex items-center; }
+  .navbar-brand-section { @apply gap-3; }
+  .navbar-brand { @apply gap-2 font-bold text-slate-900 no-underline; }
+  .navbar-logo { @apply gap-2; }
+  .navbar-logo img { @apply h-9 w-9 object-contain; }
+  .nav-content { @apply gap-4; }
+  .nav-authenticated { @apply gap-4; }
+  .nav-links { @apply gap-2; }
+  .welcome-text { @apply hidden text-sm font-medium text-slate-600 lg:inline; }
+  .mobile-menu-btn { @apply rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden; }
+  .mobile-overlay { @apply fixed inset-0 z-40 bg-slate-950/30; }
+  .landing-hero { @apply relative overflow-hidden bg-slate-950 py-20 text-white sm:py-28; }
+  .hero-content { @apply relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6; }
+  .hero-title { @apply text-4xl font-bold tracking-tight sm:text-6xl; }
+  .hero-subtitle { @apply mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300; }
+  .hero-buttons { @apply mt-8 flex flex-wrap justify-center gap-3; }
+  .features-grid { @apply grid gap-5 md:grid-cols-2 lg:grid-cols-3; }
+  .feature-card { @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm; }
+  .feature-icon { @apply mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600; }
+  .feature-title { @apply text-lg font-semibold text-slate-900; }
+  .feature-description { @apply mt-2 text-sm leading-6 text-slate-500; }
+  .messages-layout { @apply flex min-h-[calc(100vh-70px)] bg-slate-50; }
+}

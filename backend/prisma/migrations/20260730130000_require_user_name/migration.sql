@@ -1,0 +1,2 @@
+UPDATE "User" SET "name" = '' WHERE "name" IS NULL;
+ALTER TABLE "User" ALTER COLUMN "name" SET NOT NULL;
